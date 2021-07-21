@@ -15,8 +15,8 @@ from accountapp.models import NewModel
 @login_required
 def hello_world(request):
     if request.method == "POST":
-        temp = request.POST.get('next')
-        request.GET.get('next')
+
+        temp = request.POST.get('input_text')
 
         new_model = NewModel()
         new_model.text = temp
