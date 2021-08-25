@@ -13,7 +13,7 @@ from django.views.generic import RedirectView
 from articleapp.models import Article
 from likeapp.models import LikeRecord
 
-@transaction.atomic()
+@transaction.atomic
 def db_transaction(user, article):
     like_record = LikeRecord.objects.filter(user=user,
                                             article=article)
